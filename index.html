@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Cadastro de Produtos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Montserrat:wght@300&family=Open+Sans:ital,wght@1,300&family=Outfit:wght@100&family=Pacifico&family=Poppins:wght@300&family=Raleway:wght@200;400&family=Reem+Kufi&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="card">
+            <div class="lineinput"><input class="input" type="text" placeholder="Produto: " id="produto"></div>
+            <div class="lineinput"><input class="input" type="number" placeholder="Valor: " id="valor"></div>
+            <div class="lineinput"><input class="input" type="number" placeholder="Quantidade: " id="quantidade"></div>
+            <button onclick="save()">Adcionar</button>
+            <button onclick="limpar()">Limpar</button>
+            <input style=" display:none;" type="file" id="file">
+            <button id="importar">Importar</button>
+            <button onclick="ExportarJson()">Exportar</button><br><br>
+            <label>Valor Total <span style="font-size:30px;margin-left:10px;" id="money">R$ 0,00</span></label>
+        </div>
+        <div class="content">
+            <table id="tabela">
+                <thead>
+                    <th>Produto</th>
+                    <th>Quant</th>
+                    <th>Valor</th>
+                    <th>Total</th> 
+                    <th></th>
+                </thead>
+                <tbody id="table"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <script src="FileSaver.js"></script>
+</body>
+</html>
+
